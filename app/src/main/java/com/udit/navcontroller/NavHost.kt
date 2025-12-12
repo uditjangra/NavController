@@ -21,7 +21,12 @@ fun NavHostRoute(navHostController: NavHostController){
         composable("profile"){
             ProfileClick(onProfileClick = {
                 navHostController.navigate("dashboard")
-            })
+            }, onProfileClick2 = {
+                navHostController.navigate("login")
+            }, onCloseClick = {
+                navHostController.navigate("")
+            }
+                )
         }
     }
 }
